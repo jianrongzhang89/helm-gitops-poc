@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: backstage-app
+  namespace: jianrong
+spec:
+  destination:
+    namespace: jianrong
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    directory:
+      recurse: true
+    path: charts
+    repoURL: https://github.com/jianrongzhang89/helm-gitops-poc.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
