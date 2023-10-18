@@ -49,6 +49,7 @@ metadata:
   name: knative-eventing
   namespace: knative-eventing
   annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
     argocd.argoproj.io/sync-wave: "2"
 spec: {}
 ---
@@ -58,5 +59,6 @@ metadata:
   name: knative-serving
   namespace: knative-serving
   annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
     argocd.argoproj.io/sync-wave: "2"
 spec: {}
