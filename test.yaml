@@ -11,9 +11,9 @@ spec:
   source:
     directory:
       recurse: true
-    path: app
-    repoURL: https://github.com/siamaksade/openshift-gitops-getting-started.git
-    targetRevision: HEAD
+    path: argocd-example-apps
+    repoURL: https://github.com/stevesea/argocd-helm-app-of-apps-example.git
+    targetRevision: test
   syncPolicy:
     automated:
       prune: true
